@@ -1,0 +1,322 @@
+Qn 19: to find average of two numbers. Sarika
+ans.   pseudo : (nivya)
+               Input num1
+               Input num2
+               sum = num1 + num2 
+               average = sum / 2
+               Print average    
+
+        pseudo : routine
+               Function FindAvg (num1, num2)
+                     sum = num1 + num2 
+                     average = sum / 2
+                     return average
+
+        pseudo: routine test
+              Procedure TestFindCube()
+              Input num1
+              Input num2
+              average = Findavg(num1,num2)
+              Print average       
+
+Qn 20. to find cube of number. Sahla               
+ans.    pseudo: 
+          Input num 
+          cube = num * num * num 
+          Print cube 
+
+      pseudo: routine 
+          Function FindCube(num)
+          cube = num * num * num 
+          Return cube 
+    
+      pseudo: routine test
+          Procedure TestFindCube()
+          Input num 
+          cube = FindCube(num)
+          Print cube    
+
+Qn 15. to find square of the number. Anjana E R 
+ans. pseudo: 
+          Input num 
+          square = num * num 
+          Print square 
+
+      pseudo: routine 
+          Function FindSquare(num)
+          square = num * num 
+          Return square
+    
+      pseudo: routine test
+          Procedure TestFindSquare()
+          Input num 
+          square = FindSquare(num)
+          Print square    
+
+Qn 9. swap two numbers. Minnu
+ans. pseudo:
+            Input num1, num2
+            temp = num1
+            num1 = num2
+            num2 = temp
+            Print num1, num2
+
+       pseudo: routine 
+             Function SwapNumbers(num1, num2)
+                temp = num1
+                num1 = num2
+                num2 = temp
+                Return num1, num2
+
+        pseudo: routine test
+                Procedure TestSwapNumbers()
+                  Input num1, num2
+                  num1, num2 = SwapNumbers(num1, num2)
+                  Print num1, num2
+
+Qn 28. to check nubmer is divisible by 3. Ashwin
+ans .  pseudo: routine 
+          Function IsDivisibleBy3(num)
+        if num % 3 == 0
+            return True 
+        else 
+            return False 
+            
+       pseudo: routine test
+             Function TestIsDivisibleBy3()
+          input num 
+          if IsDivisibleBy3(num)
+            print "Divisible By 3"
+          else 
+            print "Not Divisible By 3"
+
+Qn 11. number divisible by 27. Abijith 
+
+ans . pseudo: routine 
+        Function IsDivisibleBy27(num)
+        if num % 27 == 0
+            return True 
+        else 
+            return False 
+        
+     pseudo: routine test 
+        Function TestIsDivisibleBy27()
+          input num 
+          if IsDivisibleBy27(num)
+            print "Divisible By 27"
+          else 
+            print "Not Divisible By 27"   
+
+Qn 14. to print N natural numbers. Shilpa
+ans . pseudo: routine 
+          Function PrintNNaturalNumbers(n)
+              for i from 1 to n
+              print i
+
+      pseudo: routine test
+            Function TestPrintNNaturalNumbers()
+              input n
+              PrintNNaturalNumbers(n)  
+
+Qn 1. to check a number palindrome. Sarika 
+ans. pseudo: routine 
+        Function IsPalindrome(num)
+          original = num
+          reversed = 0
+          while (original > 0)
+            digit = original % 10
+            reversed = reversed * 10 + digit
+            original = original / 10
+           end while 
+            return (num == reversed)
+
+   pseudo: routine test
+         Function TestIsPalindrome()
+            input num
+            if IsPalindrome(num)
+              print "Palindrome"
+            else
+              print "Not Palindrome"
+
+Qn 2. to check a number amstrong. Collin
+ans . pseudo: routine 
+      Function IsArmstrong(num)
+        original = num
+        sum = 0
+        while (num > 0)
+          digit = num % 10
+          sum = sum + (digit * digit * digit)
+          num = num / 10
+        if (original == sum)
+          return True
+        else
+          return False
+
+     pseudo: routine test
+          Function TestIsArmstrong()
+            input num
+            if IsArmstrong(num)
+              print "Armstrong"
+            else
+              print "Not Armstrong"
+
+
+Qn 3. to check a number prime. Ann Maria 
+ans . pseudo: routine
+          Function IsPrime(num)
+            if num <= 1
+              return False
+            for i from 2 to sqrt(num)
+              if num % i == 0
+                return False
+          return True
+
+      pseudo: routine test
+              Function TestIsPrime()
+                input num
+                if IsPrime(num)
+                  print "Prime"
+                else
+                  print "Not Prime"
+
+Qn 7. to check a number perfect number. Anjana N K 
+ans.  pseudo: routine 
+          Function IsPerfectNumber(num)
+            sum = 0
+            for i from 1 to num / 2
+              if num % i == 0
+                sum = sum + i
+            if sum == num
+              return True
+            else
+              return False
+
+      pseudo: routine test
+              Function TestIsPerfectNumber()
+                input num
+                if IsPerfectNumber(num)
+                    print "Perfect Number"
+                else
+                    print "Not Perfect Number"
+
+17. to check number is odd or even. Neha
+ans. pseudo: routine 
+            Function IsOddOrEven(num)
+              if num % 2 == 0
+                return "Even"
+              else
+                return "Odd"
+
+     pseudo: routine test
+               Function TestIsOddOrEven()
+                  input num
+                  result = IsOddOrEven(num)
+                  print result
+
+Qn 18. to check a year leap. Anugrah Krishnan
+ans . pseudo: routine 
+            Function IsLeapYear(year)
+              if (year % 4 == 0)
+                  if (year % 100 != 0) or (year % 400 == 0)
+                      return True
+                  else
+                      return False
+              else
+                  return False
+
+      pseudo: routine test
+              Function TestIsLeapYear()
+                input year
+                if IsLeapYear(year)
+                    print "Leap Year"
+                else
+                    print "Not Leap Year"
+
+Qn 21. to check a number perfect square or not. Athulya 
+ans.  pseudo: routine 
+            Function IsPerfectSquare(num)
+              if num < 0
+                return False
+              root = sqrt(num)
+              if root * root == num
+                return True
+              else
+                return False
+
+      pseudo: routine test
+              Function TestIsPerfectSquare()
+                  input num
+                    if IsPerfectSquare(num)
+                        print "Perfect Square"
+                    else
+                        print "Not Perfect Square"
+
+Qn 5. Reverse the number. Alan      
+ans . pseudo: routine 
+            Function ReverseNumber(num)
+              reversed = 0
+              while num > 0
+                digit = num % 10
+                reversed = reversed * 10 + digit
+                num = num / 10
+            return reversed
+
+      pseudo: routine test
+              Function TestReverseNumber()
+                input num
+                reversed = ReverseNumber(num)
+                print "Reversed Number: " + reversed
+
+Qn 6. Factorials of the number. Ashna
+ans . pseudo: routine
+              Function Factorial(num)
+                factorial = 1
+                  for i from 1 to num
+                    factorial = factorial * i
+                return factorial
+
+      pseudo: routine test
+              Function TestFactorial()
+                input num
+                result = Factorial(num)
+                print "Factorial: " + result
+
+Qn 4. Fibonacci. Gladsy, Anurag 
+ans .pseudo: routine 
+            Function Fibonacci(n)
+              first = 0
+              second = 1
+              if n == 0
+                return first
+              if n == 1
+                return second
+              for i from 2 to n
+                currentFibonacci = first + second
+                first = second
+                second = currentFibonacci
+              return second
+
+     pseudo: routine test
+           Function TestFibonacci()
+            input n
+            result = Fibonacci(n)
+            print "Fibonacci Number: " + result
+
+Qn 22. to print prime numbers between in the limit. Shilpa
+ans. 
+
+
+      
+
+
+
+
+
+          
+
+              
+
+     
+
+
+            
