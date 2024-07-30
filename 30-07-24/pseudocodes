@@ -303,7 +303,195 @@ ans .pseudo: routine
             print "Fibonacci Number: " + result
 
 Qn 22. to print prime numbers between in the limit. Shilpa
-ans. 
+ans. pseudo: routine 
+          Function IsPrime(number)
+            if number <= 1
+                return False
+            for i from 2 to sqrt(number)
+              if number % i == 0
+                return False
+            return True
+
+        Function PrintPrimesInRange(lowerLimit, upperLimit)
+          for number from lowerLimit to upperLimit
+            if IsPrime(number)
+              print number
+
+     pseudo: routine test
+            Function TestPrintPrimesInRange()
+                  input lowerLimit
+                  input upperLimit
+                  PrintPrimesInRange(lowerLimit, upperLimit)
+
+12. to find an element from the array. Gopika
+ans. pseudo: routine 
+            Function FindElementInArray(array, element)
+              for i from 0 to length of array - 1
+                if array[i] == element
+                  return i
+              return -1  
+
+      pseudo: routine test
+            Function TestFindElementInArray()
+              input array
+              input element
+              index = FindElementInArray(array, element)
+              if index != -1
+                  print "Element found at index: " + index
+              else
+                  print "Element not found"
+
+
+13. to find the largest number from array. Mohammed Riza 
+ans.pseudo: routine 
+          Function FindLargestNumberInArray(array)
+            largestNumber = array[0]
+            for i from 1 to length of array - 1
+                if array[i] > largestNumber
+                    largestNumber = array[i]
+            return largestNumber
+
+    pseudo: routine test
+            Function TestFindLargestNumberInArray()
+              input array
+              largestNumber = FindLargestNumberInArray(array)
+              print "Largest Number: " + largestNumber
+
+24. to sort the elements in the array. Alan
+ans . pseudo: routine 
+          Function SortArray(array)
+            for i from 0 to length of array - 2
+              for j from 0 to length of array - i - 2
+                if array[j] > array[j + 1]
+                    temp = array[j]
+                    array[j] = array[j + 1]
+                    array[j + 1] = temp
+          return array
+
+      pseudo: routine test
+            Function TestSortArray()
+              input array
+              sortedArray = SortArray(array)
+              print "Sorted Array: " + sortedArray
+
+8. to find sum of n numbers. Yahkoob, Aaryaka
+ans.pseudo: routine 
+            Function SumOfNNumbers(n)
+              sum = 0
+              for i from 1 to n
+                sum = sum + i
+              return sum
+
+    pseudo: routine test
+          Function TestSumOfNNumbers()
+            input n
+            result = SumOfNNumbers(n)
+            print "Sum of first " + n + " numbers: " + result
+
+10. to display the duplicate numbers in the array. Girish.
+ans. pseudo: routine 
+            Function FindDuplicateNumbers(array)
+              duplicates = []
+              for i from 0 to length of array - 1
+                for j from i + 1 to length of array - 1
+                  if array[i] == array[j] and array[i] not in duplicates
+                    duplicates.append(array[i])
+              return duplicates
+
+     pseudo: routine test
+            Function TestFindDuplicateNumbers()
+              input array
+              duplicates = FindDuplicateNumbers(array)
+                if length of duplicates > 0
+                    print "Duplicate Numbers: " + duplicates
+                else
+                    print "No Duplicate Numbers"
+
+16. to check string anagram. Dijol
+ans. pseudo: routine 
+          Function AreAnagrams(string1, string2)
+            if length of string1 != length of string2
+              return False
+            sortedString1 = sort string1
+            sortedString2 = sort string2
+            return (sortedString1 == sortedString2)
+
+     pseudo: routine test
+            Function TestAreAnagrams()
+                input string1
+                input string2
+                if AreAnagrams(string1, string2)
+                    print "Strings are anagrams"
+                else
+                    print "Strings are not anagrams"
+
+23. to find length of the string. Nivya 
+ans. pseudo: routine 
+          Function GetStringLength(inputString)
+            length = 0
+            for each character in inputString
+              length = length + 1
+            return length
+
+     pseudo: routine test
+          Function TestGetStringLength()
+            input inputString
+            length = GetStringLength(inputString)
+            print "Length of the string: " + length
+
+25. to delete duplicates strings in sting list. Roshith
+ans. pseudo: routine 
+            Function RemoveDuplicateStrings(stringList)
+              uniqueStrings = new list
+              for i from 0 to length of stringList - 1
+                currentString = stringList[i]
+                  if currentString not in uniqueStrings
+                      uniqueStrings.add(currentString)
+            return uniqueStrings
+
+     pseudo: routine test
+        Function TestRemoveDuplicateStrings()
+          input stringList
+          uniqueStrings = RemoveDuplicateStrings(stringList)
+          print "List after removing duplicates: " + uniqueStrings
+
+26. to count vowels in a string. Gayathri 
+ans. pseudo: routine
+              Function CountVowels(inputString)
+                vowelCount = 0
+                for each character in inputString
+                  if character == 'a' or character == 'e' or character == 'i' or character == 'o' or character == 'u' or
+                   character == 'A' or character == 'E' or character == 'I' or character == 'O' or character == 'U'
+                      vowelCount = vowelCount + 1
+              return vowelCount
+
+    pseudo: routine test
+          Function TestCountVowels()
+              input inputString
+              vowelCount = CountVowels(inputString)
+              print "Number of vowels: " + vowelCount
+
+27. to count whitespaces in a sentence. Rishwin
+ans.  pseudo: routine 
+             Function CountWhitespaces(inputString)
+                whitespaceCount = 0
+                for each character in inputString
+                  if character == ' ' or character == '\t' or character == '\n'
+                    whitespaceCount = whitespaceCount + 1
+                return whitespaceCount
+ 
+      pseudo: routine test
+            Function TestCountWhitespaces()
+              input inputString
+              whitespaceCount = CountWhitespaces(inputString)
+              print "Number of whitespaces: " + whitespaceCount
+
+
+
+
+
+
+
 
 
       
