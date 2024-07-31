@@ -1,0 +1,216 @@
+QN: Calculate price in a shopping cart
+
+function TotalCost(itemprice: float, mindiscountAmount: float, discountRate: float) -> float
+    totalCost: float = 0
+    
+    for each item in cart: list
+        totalCost = totalCost + itemprice 
+    
+    if totalCost > mindiscountAmount
+        totalCost = totalCost - discountRate
+    
+    return totalCost
+
+SIMPLE CALCULATOR:
+
+    print "Enter operator (+, -, *, /)"
+    input operator: string
+    
+    print "Enter first number:"
+    input num1: float
+    
+    print "Enter second number:"
+    input num2: float
+    
+    if operator == "+" THEN
+        result = num1 + num2
+    else if operator == "-" THEN
+        result = num1 - num2
+    else if operator == "*" THEN
+        result = num1 * num2
+    else if operator == "/" THEN
+        if num2 != 0 THEN
+            result = num1 / num2
+        else
+            print "Division by zero is not allowed"
+        end if
+    else
+        print "Invalid operation selected"
+    end if
+
+    print "The result is:", result
+
+  OR ANS: 
+
+    BEGIN
+    DECLARE num1, num2, result AS FLOAT
+    DECLARE operator AS CHAR
+ 
+    // Input numbers and operator
+    PRINT "Enter first number: "
+    INPUT num1
+ 
+    PRINT "Enter operator (+, -, *, /): "
+    INPUT operator
+ 
+    PRINT "Enter second number: "
+    INPUT num2
+ 
+    // Perform calculation based on operator
+    IF operator == '+' THEN
+        result = num1 + num2
+    ELSE IF operator == '-' THEN
+        result = num1 - num2
+    ELSE IF operator == '*' THEN
+        result = num1 * num2
+    ELSE IF operator == '/' THEN
+        IF num2 != 0 THEN
+            result = num1 / num2
+        ELSE
+            PRINT "Error: Division by zero"
+            EXIT
+        END IF
+    ELSE
+        PRINT "Error: Invalid operator"
+        EXIT
+    END IF
+ 
+    // Output result
+    PRINT "The result is: ", result
+END
+
+
+FIZZBUZZ:
+
+
+   for num: int from 1 to 100
+        if num % 3 == 0 and num % 5 == 0 
+            print "FizzBuzz"
+        else if num % 3 == 0 
+            print "Fizz"
+        else if num % 5 == 0 
+            print "Buzz"
+        else
+            print num
+        end if
+    end for
+
+
+Palindrome :
+
+
+    print "Enter a string:"
+    input string: string
+    set left: int = 0
+    set right: int = length(string) - 1
+    while left < right 
+        if string[left] != string[right] 
+            print "The string is not a palindrome."
+            return // Exit the function since it's not a palindrome
+        end if
+        left = left + 1
+        right = right - 1
+    end while
+    print "The string is a palindrome."
+
+LARGEST FROM THE ARRAY:
+
+
+if length(array)->int == 0 
+    print "The array is empty."
+    return -1
+end if
+largest->int = array[0]
+
+for i-> from 1 to length(array) - 1
+    if array[i] > largest 
+        largest = array[i]
+    end if
+end for
+
+return largest
+
+
+Bank Account ManagementWrite: pseudocode to manage a simple bank account that allows deposits, withdrawals, and checking the balance.
+
+
+print "Select operation (1: Deposit, 2: Withdraw, 3: Check Balance):"
+input choice -> int
+switch choice
+    case 1:
+        print "Enter deposit amount:"
+        input amount -> double
+        accountBalance -> double = accountBalance + amount
+        print "Deposited:", amount
+        break
+    
+    case 2:
+        print "Enter withdrawal amount:"
+        input amount -> double
+            if amount <= accountBalance 
+                accountBalance -> double = accountBalance - amount
+                print "Withdrawn:", amount
+            else
+                print "Insufficient funds."
+            end if
+            break
+    
+    case 3:
+        print "Current balance:", accountBalance
+        break
+    
+    default:
+        print "Invalid choice. Please select 1, 2, or 3."
+end switch
+
+OR ANS: 
+
+   Function TestBankAccount()
+	balance=0
+	print "1.deposit"
+	print "2.withdraw"
+	print "3.check balance"
+	print "4.exit"
+        input choice
+	switch choice
+	case 1.
+	print "enter amount"
+	if amount<decimal> > 0 
+                balance = balance + amount
+                print "Deposit successful " + balance
+	 else
+                print "Invalid deposit amount."
+	case 2.
+	print "enter amount"
+	 if amount<decimal> > 0 
+                if amount<decimal> <= balance 
+                    balance = balance - amount
+                    print "Withdrawal successful"
+                else
+                    print "Insufficient balance."
+            else
+                print "Invalid withdrawal amount."
+	case 3.
+		 print "Current balance: " + balance
+	call TestBankAccount()
+
+SUM OF FIRST 10 EVEN NUMBERS:
+
+    BEGIN
+    DECLARE count , num AS INT
+    DECLARE sum AS FLOAT
+
+    count = 0
+    num = 1
+    sum = 0
+
+    WHILE count < 10 DO
+        IF num % 2 == 0 THEN
+            sum = sum + num
+            count ++
+        END IF
+        num ++
+    END WHILE
+
+    PRINT "SUM:", sum
+END
