@@ -1,0 +1,28 @@
+QN  :print the following pattern USING While loop 
+        1
+      1 2
+    1 2 3
+  1 2 3 4
+1 2 3 4 5 
+
+ps
+-------------------
+function PrintNumTriangleMirroredRightAngle(N = 5)
+    row = 1
+    while row <= N
+        spaces = N - row
+        num = 1
+        col = 1
+        while col <= N
+            if col <= spaces
+                Print " "
+            else
+                Print num
+                num = num + 1
+            end if
+            col = col + 1
+        end while
+        Print NewLine
+        row = row + 1
+    end while
+
