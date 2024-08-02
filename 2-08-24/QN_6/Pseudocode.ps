@@ -1,0 +1,28 @@
+QN6. print the N th term in the series 21, 22, 24, 27, 31, ... use do..while loop
+Note: 
+    21, 22, 24, 27, 31, ...
+      1   2   3   4           diff    
+    1. GetNthTerm_21_22_24_27 -> int, N -> int 
+    2. TestGetNthTerm_21_22_24_27 -> void 
+        N is number of terms 
+----ps----
+function GetNthTermOfSeries(N)    
+    term = 21
+    difference = 1
+    I = 1
+    do  
+        if I == N
+            break
+        end if         
+        //
+        term = term + difference
+        difference = difference + 1
+
+        I++ 
+    while  I <= N  
+    return term
+function TestGetNthTerm_21_22_24_27()
+    Input N                             
+    nthTerm = GetNthTermOfSeries(N)
+    Print nthTerm
+----cs explained----
