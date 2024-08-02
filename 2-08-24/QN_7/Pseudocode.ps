@@ -1,0 +1,43 @@
+QN 7 :print the following pattern 
+        1
+      1 2
+    1 2 3
+  1 2 3 4
+1 2 3 4 5 
+Here, N = number of lines = 5
+    
+function PrintNumTriangleMirroredRightAngle(N)
+function TestPrintNumTriangleMirroredRightAngle()
+Here, 1. PrintNumTriangleMirroredRightAngle -> void, N -> int = number of lines 
+      2. TestPrintNumTriangleMirroredRightAngle -> void 
+----ps----
+function PrintNumTriangleMirroredRightAngle(N) = 5
+    for I = 1; I <= N; I++          
+        for J = 1; J <= N-I; J++     
+            Print "  "                 
+        end for 
+        for J = 1; J <= I; J++       
+            Print J + " "           
+        end for 
+        Print NewLine 
+    end for 
+function TestPrintNumTriangleMirroredRightAngle()
+    Input N 
+    PrintNumTriangleMirroredRightAngle(N)
+OR
+
+function PrintNumTriangleMirroredRightAngle(N = 5)
+    for row = 1; row <= N; row++          
+        spaces = N - row
+        num = 1
+        for col = 1; col <= N; col++     
+            if col <= spaces
+                Print " "
+            else
+                Print num
+                num = num + 1
+            end if
+        end for 
+        Print NewLine 
+    end for 
+
