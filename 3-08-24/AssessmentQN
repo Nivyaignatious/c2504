@@ -1,1 +1,143 @@
+Pseudo code for this question:
 
+// Function to read salaries and calculate required metrics
+function ReadAndProcessSalaries()
+    totalSalary = 0
+    salaryCount = 0
+    primeCount = 0
+    fourDigitCount = 0
+    maxSalary = 0
+    do
+        print "Enter doctor salary (-1 to stop):"
+        input salary
+        if salary == -1
+            break
+        end if
+        
+        // Update total and count
+        totalSalary += salary
+        salaryCount += 1
+
+        // Check if prime
+        if IsPrime(salary)
+            primeCount += 1
+        end if
+
+        // Check if at least 4 digits
+        if IsAtLeast4Digits(salary)
+            fourDigitCount += 1
+        end if
+
+        // Check for maximum salary
+        if salary > maxSalary
+            maxSalary = salary
+        end if
+    while salary != -1
+
+    // Calculate average salary
+    if salaryCount > 0
+        averageSalary = totalSalary / salaryCount
+    else
+        averageSalary = 0
+    end if
+
+    // Output results
+    print "Average Salary:", averageSalary
+    print "Prime Salaries Count:", primeCount
+    print "Four Digit Salaries Count:", fourDigitCount
+    print "Maximum Salary:", maxSalary
+
+// Function to check if a number is prime
+function IsPrime(number)
+    if number <= 1
+        return false
+    end if
+    for i = 2 to sqrt(number)
+        if number % i == 0
+            return false
+        end if
+    end for
+    return true
+
+// Function to check if a salary has at least 4 digits
+function IsAtLeast4Digits(number)
+    return number >= 1000
+
+
+csharp code for the question :
+
+static void ReadAndProcessSalaries()
+    {
+        int totalSalary = 0;
+        int salaryCount = 0;
+        int primeCount = 0;
+        int fourDigitCount = 0;
+        int maxSalary = 0;
+        int salary;
+
+        do
+        {
+            Console.WriteLine("Enter doctor salary (-1 to stop):");
+            salary = int.Parse(Console.ReadLine());
+
+            if (salary == -1)
+            {
+                break;
+            }
+
+            totalSalary += salary;
+            salaryCount++;
+
+            if (IsPrime(salary))
+            {
+              primeCount++;
+            }
+
+            if (IsAtLeast4Digits(salary))
+            {
+              fourDigitCount++;
+            }
+
+            if (salary > maxSalary)
+            {
+              maxSalary = salary;
+            }
+
+      } while (salary != -1);
+
+      if (salaryCount > 0)
+      {
+      int averageSalary = totalSalary / salaryCount : 0;
+      }
+
+      Console.WriteLine("Average Salary: " + averageSalary);
+      Console.WriteLine("Prime Salaries Count: " + primeCount);
+      Console.WriteLine("Four Digit Salaries Count: " + fourDigitCount);
+      Console.WriteLine("Maximum Salary: " + maxSalary);
+  }
+
+static bool IsPrime(int number)
+    {
+        if (number <= 1)
+        {
+            return false;
+        }
+        for (int i = 2; i <= Math.Sqrt(number); i++)
+        {
+            if (number % i == 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+static bool IsAtLeast4Digits(int number)
+    {
+        return number >= 1000;
+    }
+
+static void Main()
+    {
+        ReadAndProcessSalaries();
+    }
