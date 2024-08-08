@@ -1,0 +1,60 @@
+1. What is MSSQL and its use?
+
+MSSQL (Microsoft SQL Server) is a relational database management system (RDBMS) developed by Microsoft. It is used for storing, retrieving, and managing data in databases. MSSQL is commonly used in applications that require structured data storage, such as web applications, enterprise-level applications, and data analytics.
+
+2.Explain CRUD operations with an example.
+
+CRUD stands for Create, Read, Update, and Delete—the four basic operations that can be performed on database records.
+Create: Insert new data into the database.
+Read: Retrieve data from the database.
+Update: Modify existing data in the database.
+Delete: Remove data from the database.
+Example:Create: INSERT INTO Employees (Name, Position) VALUES ('John Doe', 'Developer');
+Read: SELECT * FROM Employees WHERE Name = 'John Doe';
+Update: UPDATE Employees SET Position = 'Senior Developer' WHERE Name = 'John Doe';
+Delete: DELETE FROM Employees WHERE Name = 'John Doe';
+
+3.Which are the different types of data types?
+
+Data types in databases specify the type of data that can be stored in a column. Common data types include:
+Integer: Whole numbers (e.g., INT, BIGINT).
+Float/Decimal: Floating-point numbers (e.g., FLOAT, DECIMAL).
+String: Text data (e.g., VARCHAR, CHAR).Date/Time: 
+Dates and times (e.g., DATE, DATETIME).
+Boolean: True/False values (e.g., BIT).
+Binary: Binary data (e.g., BINARY, VARBINARY).
+
+4.Which are the MSSQL commands?
+
+MSSQL commands can be categorized as follows:
+Data Definition Language (DDL): Defines the structure of the database (e.g., CREATE, ALTER, DROP).
+Data Manipulation Language (DML): Manages data within tables (e.g., SELECT, INSERT, UPDATE, DELETE).
+Data Control Language (DCL): Manages access permissions (e.g., GRANT, REVOKE).
+Transaction Control Language (TCL): Manages transactions (e.g., COMMIT, ROLLBACK).
+
+5.How many relational operators and which are they?
+
+Relational operators are used to compare values in SQL. 
+The common ones include:= :
+Equal to!= or <> : 
+Not equal to< : 
+Less than> : 
+Greater than<= : 
+Less than or equal to>= : 
+Greater than or equal to <=
+BETWEEN : 
+Within a range LIKE : 
+Pattern matching IN : Matches any value in a list
+
+6.What is DML?
+
+DML (Data Manipulation Language) consists of SQL commands used to manage data 
+within database objects like tables. Examples of DML commands are SELECT, INSERT, UPDATE, and DELETE.
+
+7.What is the difference between DROP and TRUNCATE?
+
+DROP: Removes the entire table (or database) from the database schema. It is irreversible, 
+and all data, indexes, and relationships are deleted.
+TRUNCATE: Deletes all rows from a table, but the table structure and its columns, constraints, 
+and indexes remain. It is faster than DELETE because it does not log individual row deletions.
+
