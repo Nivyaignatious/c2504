@@ -21,7 +21,7 @@ Salary DECIMAL(10, 2)
 );
 
 ANS:- select avg(salary) as avg_salary
-      from employees2
+      from employees
       group by departmentid;
 
 QN 3. Find Employees with No Manager
