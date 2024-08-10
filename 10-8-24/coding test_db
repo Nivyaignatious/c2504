@@ -20,7 +20,7 @@ DepartmentID INT,
 Salary DECIMAL(10, 2)
 );
 
-ANS:- select avg(salary) as avg_salary
+ANS:- select departmentid , avg(salary) as avg_salary
       from employees
       group by departmentid;
 
@@ -43,7 +43,7 @@ ANS:- select employeeid , name
       from employees
       where managerid is null;
 
-QN 5. Find the Top N Salespersons by Sales
+QN 4. Find the Top N Salespersons by Sales
 Problem:
 Given a table `Sales`
 with columns `SalesPersonID`, `SaleAmount`, and `SaleDate`,
@@ -57,9 +57,10 @@ SaleAmount DECIMAL(10, 2),
 SaleDate DATE
 );
 
-ANS :- select top 3 salespersonid , saleamount
+ANS :- select top 3 salespersonid , sum(saleamount)
        from sales
-       order by saleamount desc;
+       group by salespersonid 
+       order by sum(saleamount);
 
 QN 5. Find Departments with No Employees
 Problem: Given a `Departments` table and an `Employees` table,
