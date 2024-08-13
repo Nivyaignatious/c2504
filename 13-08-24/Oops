@@ -1,1 +1,82 @@
+using System;
 
+namespace BankAccount
+{
+    class Account
+    {
+        public string number;
+        private float balance;
+        public float Balance
+        {
+            private set
+            {
+                if (value < 0)
+                {
+                    Console.WriteLine("Negative Balance is not allowed");
+                    return;
+                }
+                if (value > 5000000)
+                {
+                    Console.WriteLine(" Balance should not exceed Fifty Lakh");
+                    return;
+                }
+                balance = value;
+            }
+            get { return balance; }
+        }
+        public Account(string _number)
+        {
+            number = _number;
+            Balance = 0;
+        }
+        public void deposit(float amount)
+        {
+            if (amount <= 0)
+            {
+                Console.WriteLine("Invalid Deposit");
+                return;
+            }
+
+            Balance += amount;
+        }
+        public void withdraw(float amount)
+        {
+            if (amount <= 0)
+            {
+                Console.WriteLine("Are you Kidding!!!");
+                return;
+            }
+            if ((Balance - amount) < 0)
+            {
+                Console.WriteLine("Insufficient Balance");
+                return;
+            }
+            Balance -= amount;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Account MyAcc = new Account("10012002300034");
+            MyAcc.deposit(500000);
+            MyAcc.deposit(70000);
+            MyAcc.withdraw(29999);
+            Console.WriteLine($"Sahle account balance is {MyAcc.Balance}");
+            MyAcc.withdraw(500000);
+            Console.WriteLine($"Sahle account balance is {MyAcc.Balance}");
+            MyAcc.deposit(-12500000);
+            Console.WriteLine($"Sahle account balance is {MyAcc.Balance}");
+            MyAcc.withdraw(-1229999);
+            Console.WriteLine($"Sahle account balance is {MyAcc.Balance}");
+            MyAcc.deposit(2500000);
+            Console.WriteLine($"Sahle account balance is {MyAcc.Balance}");
+            MyAcc.deposit(2000000);
+            Console.WriteLine($"Sahle account balance is {MyAcc.Balance}");
+            MyAcc.deposit(500000);
+            Console.WriteLine($"Sahle account balance is {MyAcc.Balance}");
+            Console.ReadKey();
+
+        }
+    }
+}
