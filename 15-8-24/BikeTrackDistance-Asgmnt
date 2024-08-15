@@ -1,0 +1,47 @@
+using System;
+
+namespace BikeRaceTrackApp
+{
+    class BikeRaceTrack
+    {
+        public int Distance { get; set; }
+        public BikeRaceTrack(int distance)
+        {
+            Distance = distance;
+        }
+
+        public bool IsGt(BikeRaceTrack other)
+        {
+            return this.Distance > other.Distance;
+        }
+
+        public override string ToString()
+        {
+            return $" with distance {Distance} meters";
+        }
+    }
+
+    internal class TestBikeRaceTrack
+    {
+        static void Main(string[] args)
+        {
+            BikeRaceTrack track1 = new BikeRaceTrack(1500);
+            BikeRaceTrack track2 = new BikeRaceTrack(2000);
+
+            if (track1.IsGt(track2))
+            {
+                Console.WriteLine($"Track 1 {track1} is longer than Track 2 {track2}");
+            }
+            else if (track2.IsGt(track1))
+            {
+                Console.WriteLine($"Track 1 {track1} is shorter than Track 2 {track2}");
+            }
+            else
+            {
+                Console.WriteLine($"Track 1 {track1} and Track 2 {track2} are of equal length");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
