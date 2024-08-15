@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace circle
+{
+    class CircleCircumference
+    {
+        public int Radius { get; set; }
+
+        public CircleCircumference(int radius)
+        {
+            Radius = radius;
+        }
+
+        public double FindCircumference()
+        {
+            return 2 * 3.14 * Radius;        
+        }
+        public bool IsCircumferenceGt(CircleCircumference other)
+        {
+            return this.FindCircumference() > other.FindCircumference();
+        }
+        public override string ToString()
+        {
+            return $" with radius {Radius} and circumference {FindCircumference():F2}";
+        }
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            CircleCircumference circle1 = new CircleCircumference(7);
+            CircleCircumference circle2 = new CircleCircumference(16);
+
+            if (circle1.IsCircumferenceGt(circle2))
+            {
+                Console.WriteLine($"circle 1 {circle1} is bigger than circle 2 {circle2}");
+            }
+            else if (circle2.IsCircumferenceGt(circle1))
+            {
+                Console.WriteLine($"Circle 1 {circle1} is smaller than Circle 2 {circle2}");
+            }
+            else
+            {
+                Console.WriteLine($"Circle 1 {circle1} and Circle 2 {circle2} are equally preferred");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
